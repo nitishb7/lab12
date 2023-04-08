@@ -1,0 +1,49 @@
+{
+  "main": "public/electron.js",
+  "homepage": "./",
+  "name": "lab-10",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
+    "build": "npm run react-build && electron-builder",
+    "test": "npm run react-test",
+    "eject": "npm run react-eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0",
+    "react-scripts": "^5.0.1",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "browser-request": "^0.3.3"
+  }
+}
